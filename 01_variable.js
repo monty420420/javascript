@@ -1,13 +1,13 @@
 //1. Use strict
-//added in ES5
+//added in ES5 
 'use strict';  /*usestrict 선언하면 정의된 변수만 이용가능*/
 
-//2. Variable
+//2. Variable, 메모리에 읽고 쓰기 가능
 //다른 문자열 넣어도 오류가 발생하지않는 매우 쿨한언어!!
 //변수 선언 방식에 var, let, const가 있는데 
 //var는 {}블록사용불가, 같은변수에 다른 변수타입을 넣어도, 변수선언하기 전에 값넣어도 오류발생X
 //let은 (added in ES6)에 추가되었고 var의 여러 문제점 보완
-//const는 변수 재선언, 재할당 불가 그 결과로 보안성향상
+//const는 변수 재선언, 재할당 불가 그 결과로 보안성향상 메모리에서 읽기만가능
 let globalName = 'global name';
 {
 let name = 'ten';
