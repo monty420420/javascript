@@ -28,3 +28,14 @@ class UserStorage {
        });
     }
 }
+
+
+//promise와 async로 바꿔보기
+const UserStorage1 = new UserStorage();
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+UserStorage
+  .loginUser(id, password)
+  .then(UserStorage.getRoles)
+  .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
+  .catch(console.log);
