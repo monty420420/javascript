@@ -72,7 +72,7 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1.description}`
 
 //object 
 const ten = {name: 'ten', age: 27};
-ten.age = 21; //나이변경
+ten.age = 22; //나이변경
 console.log(ten.age);
 // 5. Dynamic typing 서로 다른 값 계산시 문제가 생길수 있음
 let text = 'hello'; //문자로 선언
