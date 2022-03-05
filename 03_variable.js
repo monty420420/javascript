@@ -23,8 +23,8 @@ const maxNumber = 5;
 
 //3. Variable types
 //변수타입 설정안해도됨 
-const count = 17;
-const size = 17.1;
+const count = 18;
+const size = 12.1;
 console.log(`value: ${count}, type: ${typeof count}`);
 console.log(`value: ${size}, size: ${typeof size}`);
 
