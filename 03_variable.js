@@ -87,3 +87,5 @@ text = '3' / '1';
 console.log(`value: ${text}, type: ${typeof text}`);
 text = '3' / '1';
 console.log(`value: ${text}, type: ${typeof text}`);
+text = '3' / '1';
+console.log(`value: ${text}, type: ${typeof text}`);
