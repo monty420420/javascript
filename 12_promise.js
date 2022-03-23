@@ -62,7 +62,7 @@ const getHen = () =>
  //.then(egg => cook(egg))
  // .then(meal => console.log(meal));
 
- getHen() //
+ getHen() 
  .then(getEgg)
  .then(cook)
  .catch(console.log);
