@@ -47,13 +47,13 @@ const animals = ['🐶','🐱']
 {
     const dog = animals[0];
     const cat = animals[1];
-    // console.log(dog);
-    // console.log(cat);    
+    console.log(dog);
+    console.log(cat);    
 }
 
 {
   const [first, second] = animals;
-  console.log(first,second);
+  // console.log(first,second);
 }
 
 
