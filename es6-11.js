@@ -89,6 +89,67 @@ const animals = ['🐶','🐱']
 }
 
 
+//Default parameters //기본파라미터값설정
+{
+  {
+    // 설정안했을때
+    // function printMessage(message){ 
+    //   console.log(message);
+    // }
+    
+    //default 파라미터 설정
+    function printMessage(message = 'default message'){ 
+      // console.log(message);
+    }
+
+    printMessage('hello');
+    printMessage(); //기본파라미터값설정하지 않으면 undefine
+  }
+}
+
+//Ternary Operator
+{
+  const isCat = true;
+  
+  //사용안할때
+  {
+    let component;
+    if (isCat) {
+      component = 'cat'
+    } else {
+      component = 'dog'
+    }
+    console.log(component);
+  }
+  
+
+  //ternary 사용
+  {
+    const component = isCat ? 'cat' : 'dog';
+    console.log(component)
+    console.log(isCat ? 'cat' : 'dog')
+  }
+
+}
+
+//template literals
+
+{
+  const weather = 'sun';
+  const temparature = '16*C'
+  
+  //+연산자조합 방법
+  console.log(
+    'Today weather is ' + weather + ' and temparature is ' + temparature
+  )
+
+  //template literals사용 
+  console.log(
+    `Today weather is ${weather} and temparature is ${temparature}`
+  )
+}
+
+
 
 
 
