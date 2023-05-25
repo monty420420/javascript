@@ -74,9 +74,18 @@ const animals = ['🐶','🐱']
   //배열을 직접 건드리면 다 바뀌므로 주의
   obj1.key = 'newKey';  // key를 newKey로 변경하면 다른배열도 다 바뀜
   // console.log(array, arrayCopy, obj1);
-
-  //배열 합치기
   
+  //배열 합치기
+  const fruits1 = ['apple','strawberry']
+  const fruits2 = ['banana','kiwi']
+  const fruits = [...fruits1, ...fruits2];
+  // console.log(fruits);
+
+  //객체 합치기
+  const dog1 = {dog1: '🐶'} 
+  const dog2 = {dog2: '🐕'}
+  const dogs = {...dog1 , ...dog2}  //dog1복사체에 dog2복사체를 덮어준다는 느낌
+  // console.log(dogs)
 }
 
 
