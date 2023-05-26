@@ -119,15 +119,15 @@ const animals = ['🐶','🐱']
     } else {
       component = 'dog'
     }
-    console.log(component);
+    // console.log(component);
   }
   
 
   //ternary 사용
   {
     const component = isCat ? 'cat' : 'dog';
-    console.log(component)
-    console.log(isCat ? 'cat' : 'dog')
+    // console.log(component)
+    // console.log(isCat ? 'cat' : 'dog')
   }
 
 }
@@ -139,52 +139,152 @@ const animals = ['🐶','🐱']
   const temparature = '16*C'
   
   //+연산자조합 방법
-  console.log(
-    'Today weather is ' + weather + ' and temparature is ' + temparature
-  )
+  // console.log(
+  //   'Today weather is ' + weather + ' and temparature is ' + temparature
+  // )
 
   //template literals사용 
-  console.log(
-    `Today weather is ${weather} and temparature is ${temparature}`
-  )
+  // console.log(
+  //   `Today weather is ${weather} and temparature is ${temparature}`
+  // )
 }
 
+//ES11
+//Optional Chaining 
 
+{  
+  //예시에 사용될데이터
+  const person1 = {
+    name: 'ten',
+    job: {
+      title: 'S/W Engineer',
+      manager: {
+        name: 'Bob',
+      },
+    },
+  };
 
+  const person2 = {
+    name: 'Bob',
+  }
+  
 
+  //1.나쁜예
+  {
+    function printManager(person) {
+      console.log(person.job.manager.name);  //person파라미터전달하고 job안에manager안에name출력
+    }
+    //printManager(person1); //person1은 위에 내용들이 있어 출력되지만
+    //printManager(person2);  //person2는 name이라는 내용만있어 출력되지 않음
+  }
+  
+  //2.나쁜예
+  {
+    function printManager(person) {
+     console.log(person.job && person.job.manager && person.job.name); //3개의 조건충족 출력
+    }
+    // printManager(person1);
+    // printManager(person2);
+  }
 
+  {
+    function printManager(person){
+    console.log(person.job?.manager?.name); //person파라미터전달 job안에 manager이고 name인것출력
+   }
+    // printManager(person1);
+    // printManager(person2);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//3. Spread Syntax
-
+// Nullish Coalescing Operator 
 {
-  const obg1 = {key: 'key1'}
-  const obj2 = {key: 'key2'}
-  const array = [obg1, obj2]
-  // console.log(array)
+  // Local OR operator
+  //false: false,'',0,null,undefined
+  
+  {
+    const name = 'ten';
+    const userName = name || 'Guest';  //name에 ten이라는 문자가있으므로 true 없다면 false로 Guest문자 
+    //console.log(userName); //name에 ten이 있으므로 ten문자 출력
+  }
+
+  {
+    const name = null;
+    const userName = name || 'Guest';  
+    //console.log(userName);  //null이므로 Guest출력
+  }
+
+  {
+    const name = '';
+    const userName = name || 'Guest';  
+    //console.log(userName);  //빈문자여도 Guest출력하는 문제가 있음
+  }
+
+  {
+    const name = 0;
+    const userName = name || 'Guest';  
+    //console.log(userName);  //0이어도 Guest출력하는 문제가 있음
+  }
+  
+
+  //해결법
+  //OR operator(||)말고 ??사용
+  // ??를 사용하면 그자체를 출력하게 해줄수있다
+  
+  {
+    const name = 'ten';
+    const userName = name ?? 'Guest'; 
+    console.log(userName);  
+  }
+
+  {
+    const name = null;
+    const userName = name ?? 'Guest';  
+    console.log(userName);  
+  }
+
+  {
+    const name = '';
+    const userName = name ?? 'Guest';  
+    console.log(userName);  
+  }
+
+  {
+    const name = 0;
+    const userName = name ?? 'Guest';  
+    console.log(userName); 
+  }
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
