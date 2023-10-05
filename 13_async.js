@@ -60,7 +60,7 @@ async function pickFruit(){
    const apple = await applePromise;
    const banana = await bananaPromise;
    return `${apple} + ${banana}`;
-} 
+}
 
 pickFruit().then(console.log);
 
