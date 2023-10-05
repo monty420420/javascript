@@ -6,7 +6,7 @@ let json = JSON.stringify(true);
 // console.log(json);
 
 json = JSON.stringify(['apple', 'banana']); //stringify 함수 문자화
- //console.log(json); //json규격 배열형태로 보여줌
+//  console.log(json); //json규격 배열형태로 보여줌
 
 
 
