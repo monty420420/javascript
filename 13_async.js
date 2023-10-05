@@ -43,7 +43,7 @@ async function getApple() {
 
 async function getBanana() {
     await delay(1000);
-    return 'banana'; 
+    return 'banana';
 }
 
 //아래코드 then 버전

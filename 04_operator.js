@@ -24,7 +24,7 @@ let y = 6;
 x += y; // x = x +y;
 x -= y;
 x *= y;
-x /= y; 
+x /= y;
 
 //5. Comparison operators
 console.log(10 < 6);
@@ -116,7 +116,7 @@ switch (browser) {
        break;
     default:
         console.log('same all!');
-        break; 
+        break;
     }
 
 //11. Loops

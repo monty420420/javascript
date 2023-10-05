@@ -17,7 +17,7 @@ const rabbit = {
     size: null,
     birthDate: new Date(),
     jump: () => {
-        console.log(`${name} can jump!`);
+        // console.log(`${name} can jump!`);
     },
 };
 
@@ -48,5 +48,5 @@ const obj = JSON.parse(json, (key, value) => {
 // rabbit.jump();
 //obj.jump();
 
-console.log(rabbit.birthDate.getDate());
+// console.log(rabbit.birthDate.getDate());
 //console.log(obj.birthDate.getDate());  //error //string이라서 에러나옴

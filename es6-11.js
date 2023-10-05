@@ -14,7 +14,7 @@
     name: name,
     age: age
   }
-  
+
   const ten3 = {
     name,
     age
@@ -31,7 +31,7 @@ const student = {
    name: 'Anna',
    level: 1
 };
-// console.log(student.name) 
+// console.log(student.name)
 
 //object 오브젝트 destructuring {}
 {
@@ -48,7 +48,7 @@ const animals = ['🐶','🐱']
     const dog = animals[0];
     const cat = animals[1];
     // console.log(dog);
-    // console.log(cat);    
+    // console.log(cat);
 }
 
 {
@@ -66,15 +66,14 @@ const animals = ['🐶','🐱']
 
   const arrayCopy = [...array];
   // console.log(array, arrayCopy);
-  
 
   //배열에 추가하는법 복사한 ...array에 {key: key3}넣기
   const arrayCopy2 = [...array, { key: 'key3'}];
-  
+
   //배열을 직접 건드리면 다 바뀌므로 주의
   obj1.key = 'newKey';  // key를 newKey로 변경하면 다른배열도 다 바뀜
   // console.log(array, arrayCopy, obj1);
-  
+
   //배열 합치기
   const fruits1 = ['apple','strawberry']
   const fruits2 = ['banana','kiwi']
@@ -82,7 +81,7 @@ const animals = ['🐶','🐱']
   // console.log(fruits);
 
   //객체 합치기
-  const dog1 = {dog1: '🐶'} 
+  const dog1 = {dog1: '🐶'}
   const dog2 = {dog2: '🐕'}
   const dogs = {...dog1 , ...dog2}  //dog1복사체에 dog2복사체를 덮어준다는 느낌
   // console.log(dogs)
@@ -93,12 +92,12 @@ const animals = ['🐶','🐱']
 {
   {
     // 설정안했을때
-    // function printMessage(message){ 
+    // function printMessage(message){
     //   console.log(message);
     // }
-    
+
     //default 파라미터 설정
-    function printMessage(message = 'default message'){ 
+    function printMessage(message = 'default message'){
       // console.log(message);
     }
 
@@ -110,7 +109,7 @@ const animals = ['🐶','🐱']
 //Ternary Operator
 {
   const isCat = true;
-  
+
   //사용안할때
   {
     let component;
@@ -121,7 +120,7 @@ const animals = ['🐶','🐱']
     }
     // console.log(component);
   }
-  
+
 
   //ternary 사용
   {
@@ -137,22 +136,22 @@ const animals = ['🐶','🐱']
 {
   const weather = 'sun';
   const temparature = '16*C'
-  
+
   //+연산자조합 방법
   // console.log(
   //   'Today weather is ' + weather + ' and temparature is ' + temparature
   // )
 
-  //template literals사용 
+  //template literals사용
   // console.log(
   //   `Today weather is ${weather} and temparature is ${temparature}`
   // )
 }
 
 //ES11
-//Optional Chaining 
+//Optional Chaining
 
-{  
+{
   //예시에 사용될데이터
   const person1 = {
     name: 'ten',
@@ -167,7 +166,7 @@ const animals = ['🐶','🐱']
   const person2 = {
     name: 'Bob',
   }
-  
+
 
   //1.나쁜예
   {
@@ -177,7 +176,7 @@ const animals = ['🐶','🐱']
     //printManager(person1); //person1은 위에 내용들이 있어 출력되지만
     //printManager(person2);  //person2는 name이라는 내용만있어 출력되지 않음
   }
-  
+
   //2.나쁜예
   {
     function printManager(person) {
@@ -196,11 +195,11 @@ const animals = ['🐶','🐱']
   }
 }
 
-// Nullish Coalescing Operator 
+// Nullish Coalescing Operator
 {
   // Local OR operator
   //false: false,'',0,null,undefined
-  
+
   {
     const name = 'ten';
     const userName = name || 'Guest';  //name에 ten이라는 문자가있으므로 true 없다면 false로 Guest문자 
@@ -209,51 +208,51 @@ const animals = ['🐶','🐱']
 
   {
     const name = null;
-    const userName = name || 'Guest';  
+    const userName = name || 'Guest';
     //console.log(userName);  //null이므로 Guest출력
   }
 
   {
     const name = '';
-    const userName = name || 'Guest';  
+    const userName = name || 'Guest';
     //console.log(userName);  //빈문자여도 Guest출력하는 문제가 있음
   }
 
   {
     const name = 0;
-    const userName = name || 'Guest';  
+    const userName = name || 'Guest';
     //console.log(userName);  //0이어도 Guest출력하는 문제가 있음
   }
-  
+
 
   //해결법
   //OR operator(||)말고 ??사용
   // ??를 사용하면 그자체를 출력하게 해줄수있다
-  
+
   {
     const name = 'ten';
-    const userName = name ?? 'Guest'; 
-    console.log(userName);  
+    const userName = name ?? 'Guest';
+    console.log(userName);
   }
 
   {
     const name = null;
-    const userName = name ?? 'Guest';  
-    console.log(userName);  
+    const userName = name ?? 'Guest';
+    console.log(userName);
   }
 
   {
     const name = '';
-    const userName = name ?? 'Guest';  
-    console.log(userName);  
+    const userName = name ?? 'Guest';
+    console.log(userName);
   }
 
   {
     const name = 0;
-    const userName = name ?? 'Guest';  
-    console.log(userName); 
+    const userName = name ?? 'Guest';
+    console.log(userName);
   }
-  
+
 }
 
 
