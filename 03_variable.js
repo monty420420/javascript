@@ -1,6 +1,6 @@
 //1. Use strict
 //added in ES5
-'use strict';  /*usestrict 선언하면 정의된 변수만 이용가능*/
+//'use strict';  /*usestrict 선언하면 정의된 변수만 이용가능*/
 
 //2. Variable, 메모리에 읽고 쓰기 가능
 //다른 문자열 넣어도 오류가 발생하지않는 매우 쿨한언어!!
@@ -24,7 +24,7 @@ const maxNumber = 5;
 //호이스팅(hoisting): 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미합니다.
 //var 로 선언한 변수의 경우 호이스팅 시 undefined 로 변수를 초기화합니다.
 //변수를 선언하기전에 출력을 해도 가능함 하지만 선언한 결과가아닌 undefined가 나옴
-console.log(aaa)  //출력을 먼저
+//console.log(aaa)  //출력을 먼저
 var aaa = 'da';  //선언을 나중에
 
 
@@ -98,3 +98,57 @@ text = '3' / '1';
 // console.log(`value: ${text}, type: ${typeof text}`);
 text = '3' / '1';
 // console.log(`value: ${text}, type: ${typeof text}`);
+
+//this
+//this의 기본은 window값이다 하지만 this는 함수가 호출될때 결정이된다.
+const car = {
+    name: 'KIA',
+    getName:function(){
+        console.log("car getName",this);
+    }
+}
+//car.getName();     //{name: 'KIA', getName: ƒ}결과
+
+const globalCar = car.getName;
+//globalCar();     //밖에서 불러서 window 결과  ,  'use strict';면 undefined결과
+
+const car2 = {
+    name: 'hyundai',
+    getName:car.getName
+}
+//car2.getName()    //{name: 'hyundai', getName: ƒ}결과
+
+//this는 .bind를 이용하여 this를 고정시킬수 있다.
+const bindGetName = car2.getName.bind(car);
+//bindGetName();     //{name: 'KIA', getName: ƒ}결과
+
+//일반함수사용할경우
+// const car3 = {
+//     name: "benz",
+//     getName: function() {
+//         console.log("getName", this);
+//         const innerFunc = function() {
+//             console.log("innerFunc", this);  //상위 function 안에있는 기능이지만
+//         };
+//         innerFunc(); //누가 호출했는지가 정해지지 않아 window값이 결과
+//     },
+// };
+// car3.getName();
+
+//화살표함수를 사용할경우 계승이되어 같은값이나온다.
+const car3 = {
+    name: "benz",
+    getName: function() {
+        console.log("getName", this);
+        const innerFunc = ()=> {
+            console.log("innerFunc", this);
+        };
+        innerFunc();
+    },
+};
+// car3.getName();
+
+
+
+
+
