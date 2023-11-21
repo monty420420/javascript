@@ -1,2 +1,4 @@
-const date = new Date('December 17, 1995 03:24:00');
-console.log(date);
+let now = new Date();
+console.log( now ); // 현재 날짜 및 시간이 출력됨
+
+let userDate = "2021.04.02"
