@@ -28,6 +28,14 @@ person['name'];
 person[name];
 // console.log(person[name]);
 
-
+//반대예시
+point = {
+    one: 1000,
+    two: 100,
+    three: 10,
+}
+let score = 'one';
+point.score; //x
+point[score]; //o //score변수를이용하여 point객체안의 one값
 
 
